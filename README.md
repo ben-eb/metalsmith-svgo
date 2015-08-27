@@ -5,7 +5,9 @@
 *If you have any issues with the output of this plugin, please use the
 [svgo tracker](https://github.com/svg/svgo/issues).*
 
-Install via [npm](https://npmjs.org/package/metalsmith-svgo):
+## Install
+
+With [npm](https://npmjs.org/package/metalsmith-svgo) do:
 
 ```
 npm install metalsmith-svgo --save
@@ -55,7 +57,7 @@ Metalsmith('fixtures')
 
 ## Options
 
-See the [svgo documentation](https://github.com/ben-eb/svgo#options).
+See the [svgo documentation](https://github.com/svg/svgo).
 
 ## Contributing
 
