@@ -15,14 +15,12 @@ function minifyPromise (svgo, file) {
 function plugin (opts) {
     var svgo = new SVGO(opts);
     return function (files, metalsmith, done) {
-        var promises = [];
-        Object.keys(files).forEach(function (file) {
+        return Promise.all(Object.keys(files).map(function (file) {
             if (extname(file) !== '.svg') {
-                return;
+                return true;
             }
-            promises.push(minifyPromise(svgo, files[file]));
-        });
-        Promise.all(promises).then(function () { done(); });
+            return minifyPromise(svgo, files[file]);
+        })).then(function () { done(); });
     }
 }
 

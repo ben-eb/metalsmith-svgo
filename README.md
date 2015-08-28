@@ -66,7 +66,7 @@ tests to cover it.
 
 ## License
 
-MIT © Ben Briggs
+MIT © [Ben Briggs](http://beneb.info)
 
 [ci]:         https://travis-ci.org/ben-eb/metalsmith-svgo
 [deps]:       https://gemnasium.com/ben-eb/metalsmith-svgo
