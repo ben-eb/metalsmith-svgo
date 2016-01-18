@@ -1,22 +1,18 @@
-'use strict';
-
-var test       = require('tape'),
+var ava        = require('ava'),
     equal      = require('assert-dir-equal'),
     svgo       = require('./'),
-    Metalsmith = require('metalsmith');
+    metalsmith = require('metalsmith');
 
-test('should convert svg files', function (t) {
-    t.plan(1);
-
-    Metalsmith('fixtures')
-        .use(svgo())
-        .build(function (err) {
-            if (err) {
-                console.log(err)
-                t.fail();
-            }
-            t.doesNotThrow(function () {
-                equal('fixtures/build', 'fixtures/expected');
+ava('should convert svg files', function (t) {
+    return new Promise(function (resolve) {
+        metalsmith('fixtures')
+            .use(svgo())
+            .build(function (err) {
+                t.notOk(err, 'should not error');
+                t.doesNotThrow(function () {
+                    equal('fixtures/build', 'fixtures/expected');
+                });
+                resolve();
             });
-        });
+    });
 });
