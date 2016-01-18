@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-svgo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compress SVG with Metalsmith.",
   "license": "MIT",
   "homepage": "https://github.com/ben-eb/metalsmith-svgo",
