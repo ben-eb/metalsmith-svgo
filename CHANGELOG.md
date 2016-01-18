@@ -1,3 +1,7 @@
+# 1.0.2
+
+* Bump SVGO from 0.5.x to 0.6.x.
+
 # 1.0.1
 
 * Simplify code.
