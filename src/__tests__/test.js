@@ -9,7 +9,7 @@ ava('should convert svg files', t => {
             .use(svgo())
             .build(err => {
                 t.notOk(err, 'should not error');
-                t.doesNotThrow(() => {
+                t.notThrows(() => {
                     equal('fixtures/build', 'fixtures/expected');
                 });
                 resolve();
