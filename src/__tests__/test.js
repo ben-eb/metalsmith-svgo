@@ -8,7 +8,7 @@ ava('should convert svg files', t => {
         metalsmith('fixtures')
             .use(svgo())
             .build(err => {
-                t.notOk(err, 'should not error');
+                t.falsy(err, 'should not error');
                 t.notThrows(() => {
                     equal('fixtures/build', 'fixtures/expected');
                 });
