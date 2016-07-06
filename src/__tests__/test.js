@@ -1,7 +1,7 @@
 import ava from 'ava';
 import equal from 'assert-dir-equal';
-import svgo from '..';
 import metalsmith from 'metalsmith';
+import svgo from '..';
 
 ava('should convert svg files', t => {
     return new Promise(resolve => {

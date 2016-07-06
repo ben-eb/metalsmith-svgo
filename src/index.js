@@ -1,5 +1,5 @@
-import SVGO from 'svgo';
 import {extname} from 'path';
+import SVGO from 'svgo';
 
 function minifyPromise (svgo, file) {
     return new Promise(resolve => {
@@ -18,8 +18,6 @@ export default function metalsmithSvgo (opts) {
                 return true;
             }
             return minifyPromise(svgo, files[file]);
-        })).then(() => {
-            done();
-        });
+        })).then(() => done());
     };
 }
