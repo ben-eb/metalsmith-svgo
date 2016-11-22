@@ -39,7 +39,7 @@
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^2.0.1",
     "metalsmith": "^2.1.0",
-    "nyc": "^8.0.0"
+    "nyc": "^10.0.0"
   },
   "keywords": [
     "metalsmith",
